@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- NavBar Section -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -29,14 +30,14 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <span class="navbar-text btn" id="login">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
     </nav>
 
+    <!-- Modals Section -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -135,6 +136,7 @@
         </div> 
     </div>
 
+    <!-- Jumbotron section -->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -146,13 +148,13 @@
                     <img class="d-inline" src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block nav-link btn-warning" role="button" href="#reserveModal"
-                    data-toggle="modal" data-placement="bottom" ><strong>Reserve Table</strong></a>
+                    <a class="btn btn-block nav-link btn-warning" role="button" id="reserveButton"><strong>Reserve Table</strong></a>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Carousel Section -->
     <div class="container">
         <div class="row row-content">
             <div class="col">
@@ -318,5 +320,17 @@
             });
         });
     </script>
+    <!-- Reserve Button Script-->
+    <script>
+        $('#reserveButton').click(function() {
+            $('#reserveModal').modal('show');
+        })
+    </script>
+    <!-- Login Button Script-->
+        <script>
+            $('#login').click(function() {
+                $('#loginModal').modal('show');
+            })
+        </script>
 </body>
 </html>
